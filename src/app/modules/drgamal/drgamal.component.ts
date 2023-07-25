@@ -5,6 +5,7 @@ import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { ContactService } from 'src/app/_services/contact_us/contact.service';
+import { HomeService } from 'src/app/_services/home/home.service';
 
 @Component({
   selector: 'app-drgamal',
@@ -13,14 +14,21 @@ import { ContactService } from 'src/app/_services/contact_us/contact.service';
 })
 export class DrgamalComponent {
 
+  info:any
   constructor(private scroll: ViewportScroller ,   private titleService:Title,private elementRef: ElementRef,
-     private contactService:ContactService , private fb: FormBuilder, private toastr: ToastrService, private router: Router,
+     private contactService:ContactService , private fb: FormBuilder, private toastr: ToastrService, private router: Router,private homeinfo:HomeService
 
 
     ) { }
 
   ngOnInit(): void {
     this.titleService.setTitle('Dr Gamal ElKenany | Official website');
+    this.homeinfo.home().subscribe(
+      res=>{
+        this.info=res
+      },
+      err=>{}
+    )
 
 
   }

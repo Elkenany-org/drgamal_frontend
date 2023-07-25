@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { News } from 'src/app/interfaces/news';
+import { NewDetails, News } from 'src/app/interfaces/news';
 import {environment as env} from '../../../environments/environment';
 
 @Injectable({
@@ -15,8 +15,8 @@ export class NewsService {
     return this.http.get<News>(`${env.ApiUrl}/news`);
   }
 
-  // news_details(id:number): Observable<ApiResponse<NewsDetials>> { //Home
-  //   return this.http.get<ApiResponse<NewsDetials>>(`${env.ApiUrl}/news/news-detials?id=${id}`);
-  // }
+  news_details(id:string): Observable<NewDetails> { //Home
+    return this.http.get<NewDetails>(`${env.ApiUrl}/news/show/${id}`);
+  }
 
 }

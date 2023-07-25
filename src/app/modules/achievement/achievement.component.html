@@ -17,16 +17,16 @@
         <div class="gridy mx-auto">
 
 
-            <div class="post p-0" *ngFor="let achieve of all_achievements">
+            <div class="post p-0" *ngFor="let achieve of all_achievements.data">
                 <div class="img">
-                    <img [src]="achieve.image" alt="" >
+                    <img [src]="achieve.image_url" alt="" >
                 </div>
                 <div class="content p-3">
                     <p class="text-black-50 mb-3">{{achieve.description}}</p>
                 </div>
             </div>
 
-
+<!-- 
             <div class="post p-0">
                 <div class="img">
                     <img src="assets\images\certificates\11.jpeg" alt="" >
@@ -152,7 +152,7 @@
                 <div class="content p-3">
                     <p class="text-black-50 mb-3">Thanks and appreciation for your role in supporting Arab-African investment and international cooperation.</p>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </div>

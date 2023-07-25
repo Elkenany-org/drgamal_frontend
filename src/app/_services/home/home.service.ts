@@ -11,7 +11,7 @@ export class HomeService {
 
   constructor(private http:HttpClient) { }
   home(): Observable<Home> {
-    return this.http.get<Home>(`${env.ApiUrl}/news`);
+    return this.http.get<Home>(`${env.ApiUrl}/home/all`);
   }
 
 }

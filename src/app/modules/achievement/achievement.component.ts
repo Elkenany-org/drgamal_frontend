@@ -10,11 +10,11 @@ import { Achievements } from 'src/app/interfaces/achievements';
   styleUrls: ['./achievement.component.scss']
 })
 export class AchievementComponent {
-all_achievements!:Achievements[]
+all_achievements!:Achievements
   constructor(
     private titleService:Title,private achievements:AchivementsService
     ) {
-      titleService.setTitle('الإنجازات');
+      titleService.setTitle('Achievements');
     }
 
     ngOnInit(): void {

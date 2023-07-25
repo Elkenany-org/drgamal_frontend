@@ -18,7 +18,9 @@ export interface NewDetails {
     id:                 number;
     title:              string;
     image:              string;
+    image_url:              string;
     description:        string;
+    shortdescription:string;
     alt_text:           string;
     focus_keyword:      null;
     social_title:       null;

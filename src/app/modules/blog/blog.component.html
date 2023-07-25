@@ -22,21 +22,21 @@
 
             <div class="post p-0" *ngFor="let new of all_news">
                 <div class="img">
-                    <img [src]="new.image" alt="">
+                    <img [src]="new.image_url" alt="">
                 </div>
                 <div class="content p-3">
                     <h5 class="fw-bold text-center mb-3">{{new.title}}</h5>
                     <p class="text-black-50 mb-3">
-                        {{new.description}}
-                        <a href="https://elkenanygroup.com/el-kenany-all-the-food-industries-around-the-world-under-one-roof-gulfood-2023/">Read more</a> 
+                        {{new.shortdescription}}
                     </p>
+                    <a routerLink="/BlogDetails/{{new.id}}">Read more</a> 
 
                 </div>
             </div>
 
 
 
-            <div class="post p-0">
+            <!-- <div class="post p-0">
                 <div class="img">
                     <img src="assets\images\blog\6.jpeg" alt="">
                 </div>
@@ -119,15 +119,9 @@
                         <a target="_blank" href="https://elkenanygroup.com/el-kenany-group-ukraine-corn-ship-in-damietta-port/">Read more</a> 
 
                         </p>
-                        <!-- <span class="d-block text-black-50 text-end text-capitalize">
-                      
-                      
-                        <i class="fa-regular fa-clock"></i>
-                        an hour ago
-                    </span> -->
                 </div>
             </div>
-
+ -->
 
 
 

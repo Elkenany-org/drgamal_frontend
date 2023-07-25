@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AchievementComponent } from './modules/achievement/achievement.component';
 import { BlogComponent } from './modules/blog/blog.component';
 import { ImagePopupComponent } from './modules/image-popup/image-popup.component';
+import { BlogdetailsComponent } from './modules/blogdetails/blogdetails.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ImagePopupComponent } from './modules/image-popup/image-popup.component
     DrgamalComponent,
     AchievementComponent,
     BlogComponent,
-    ImagePopupComponent
+    ImagePopupComponent,
+    BlogdetailsComponent
   ],
   imports: [
     BrowserModule,

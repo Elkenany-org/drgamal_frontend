@@ -11,7 +11,7 @@ export class AchivementsService {
 
   constructor(private http: HttpClient) { }
 
-  all_achievements(): Observable<Achievements[]> {
-    return this.http.get<Achievements[]>(`${env.ApiUrl}/achievements`);
+  all_achievements(): Observable<Achievements> {
+    return this.http.get<Achievements>(`${env.ApiUrl}/achievements`);
   }
 }

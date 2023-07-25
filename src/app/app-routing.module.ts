@@ -4,6 +4,7 @@ import { DrgamalComponent } from './modules/drgamal/drgamal.component';
 import { CompanyprofileComponent } from './modules/companyprofile/companyprofile.component';
 import { AchievementComponent } from './modules/achievement/achievement.component';
 import { BlogComponent } from './modules/blog/blog.component';
+import { BlogdetailsComponent } from './modules/blogdetails/blogdetails.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'Blog',
     component:BlogComponent,
+  },
+  {
+    path: 'BlogDetails/:id',
+    component:BlogdetailsComponent,
   },
   {
     path: 'company-profile',

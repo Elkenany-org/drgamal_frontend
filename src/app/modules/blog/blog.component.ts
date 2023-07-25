@@ -13,7 +13,7 @@ export class BlogComponent {
   constructor(
     private titleService:Title,private news:NewsService
     ) {
-      titleService.setTitle('الأخبار و الأحداث');
+      titleService.setTitle('Blog');
 
     }
 

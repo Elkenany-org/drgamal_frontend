@@ -9,7 +9,7 @@
                 <a (click)="setActive({ label: 'about', isActive: true ,offset:0})" class="d-inline-block px-4 py-2" style="cursor: pointer;">Know more</a>
             </div>
             <div class="img col-md-5 h-100">
-                <img class="d-block" src="assets/images/drgamal33.png" alt="">
+                <img class="d-block" [src]="info.images.doctor.image_url" alt="">
                 <!-- <img class="d-md-block d-none d-lg-none" src="assets/images/drgamal3.png" alt=""> -->
             </div>
         </div>
@@ -30,16 +30,8 @@
             </div>
             <div class="content col-md-6">
                 <h2 class="mb-3">About Gamal ElKenany</h2>
-                <p class="text-black-50 fs-5">Chairman of ElKenany Group ,ElKenany For Feed Raw Materials Trading, ElKenany Application, GMT Advertising Agency, STARLIGHT INTERNATIONAL TRADING COMPANY L.L.C.
-
-                    He has a Bachelor Degree of Veterinary Medicine and General Surgery, El-Mansoura University year 2008 – 2009.
-                    
-                    Gamal ElKenany is an Egyptian passionate entrepreneur takes most of the risk and initiative for his new businesses trying to serve the Egyptian market & the middle east as he considered a major player in the Egyptian market today.
-                    
-                    His success started from believing in his dream by spent time, make efforts, and working so hard to pursuit, with his long-standing expertise through his launch of the businesses that supports small, and medium enterprises in Egypt.
-                    
-                    Due to his believing in his role in the social responsibilities, he initiates to participate as Vice Chairman of Agriculture Committee in Arab Women Investors Union, Member of the Egyptian Technical Analysts Association.</p>
-                <!-- <p class="text-black-50">I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine .</p> -->
+                <p class="text-black-50 fs-5" >
+                    {{info.about.about}}
             </div>
         </div>
     </div>
@@ -52,55 +44,68 @@
             <div class="row px-md-0 px-3 justify-content-between">
                 <div class="left p-0 col-md-5 d-md-block d-none">
                     <div class="img mb-3">
-                        <img class="img-fluid" src="assets/images/history-app.jpg" alt="">
+                        <img class="img-fluid" [src]="info.founder_of[1].image_url" alt="">
                     </div>
-                    <span class="d-block text-center py-2 mb-3">2018</span>
-                    <h3 class="mb-2 ">Elkenany APP</h3>
+                    <span class="d-block text-center py-2 mb-3">{{info.founder_of[1].year}}</span>
+                    <h3 class="mb-2 ">{{info.founder_of[1].title}}</h3>
                     <p class="mb-3">
-                       
-                        The second step DR. Gamal ElKenany have taken is provide  Elkenany Application to the market, the first and most significant Integrated service application in Egypt & The Middle East provides many digital services as: 
-                        Stock Market - Companies Guide - Tenders - Ship Movement - News - The Market - Exhibitions - Magazine.
+                       {{info.founder_of[1].description}}
                     </p>
                     <div class="img mb-3">
-                        <img class="img-fluid" src="assets/images/history-starlight.jpg" alt="">
+                        <img class="img-fluid" src="{{info.founder_of[3].image_url}}" alt="">
                     </div>
-                    <span class="d-block text-center py-2 mb-3">2023</span>
-                    <h3 class="mb-2 ">STARLIGHT INTERNATIONAL TRADING COMPANY L.L.C</h3>
+                    <span class="d-block text-center py-2 mb-3">{{info.founder_of[3].year}}</span>
+                    <h3 class="mb-2 ">{{info.founder_of[3].title}}</h3>
                     <p class="mb-md-3 mb-0">
-                        The last but not least established STARLIGHT INTERNATIONAL TRADING COMPANY L.L.C startup company in Dubai in 2023, for Consistent efforts towards “Importing & exporting and general trading” to be one of the Important mena market leaders in the trading field & around the world.
+                        {{info.founder_of[3].description}}
                     </p>
                 </div>
                 <div class="right p-0 col-md-5 mt-md-0 d-md-block d-none">
-                    <span class="d-block text-center py-2 mb-3">2010</span>
+                    <span class="d-block text-center py-2 mb-3">{{info.founder_of[0].year}}</span>
                     <div class="img mb-3">
-                        <img class="img-fluid" src="assets/images/history-elkenanygroup.jpg" alt="">
+                        <img class="img-fluid" src="{{info.founder_of[0].image_url}}" alt="">
                     </div>
                     <!-- <p class="mb-3">I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine .</p> -->
-                     <h3 class="mb-2 ">ElKenany For Feed Raw Materials Trading</h3>
+                     <h3 class="mb-2 ">{{info.founder_of[0].title}}</h3>
                     <p class="mb-3">
-                       
-                        When DR. Gamal ElKenany founded Elkenany Group in 2010, the main goal was to be the first choice as an Importer & Distributor for Commodities with high quality in the market also it is the holding company acts as umbrella where other companies fall under it.
+                        {{info.founder_of[0].description}}
                     </p>
-                    <span class="d-block text-center py-2 mb-3">2020</span> 
-                    <h3 class="mb-2">GMT Advertising Agency</h3>
+
+                    <span class="d-block text-center py-2 mb-3">{{info.founder_of[2].year}}</span> 
+                    <h3 class="mb-2">{{info.founder_of[2].title}}</h3>
                     <p class="mb-3">
                        
-                        After that DR. Gamal ElKenany pursue to Create an independent advertising agency in Egypt to serve Egypt & The Middle East market, providing the service through high level of capabilities & skills, combined with creativity to become an incredibly powerful services that make a difference to our client’s business and their consumers.
+                        {{info.founder_of[2].description}}
+                    
                     </p>
                     <!-- <p class="mb-3">I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine .</p> -->
                     <div class="img mb-3">
-                        <img class="img-fluid" src="assets/images/history-gmt.jpg" alt="">
+                        <img class="img-fluid" src="{{info.founder_of[2].image_url}}" alt="">
                     </div>
                 </div>
 
 
                 <div class=" p-0 col-md-5 d-md-none d-block">
 
-                    <div class="img mb-3">
+                    <div *ngFor="let com of info.founder_of">
+                        <div class="img mb-3">
+                            <img class="img-fluid" [src]="com.image_url" alt="">
+                        </div>
+                        <span class="d-block text-center py-2 mb-3">{{com.year}}</span>
+                        <!-- <p class="mb-3">I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine .</p> -->
+                        <h3 class="mb-2 ">{{com.title}}</h3>
+                        <p class="mb-3 ">
+                            {{com.description}}
+                        </p>
+                        <div class="line"></div>
+
+                    </div>
+
+
+                    <!-- <div class="img mb-3">
                         <img class="img-fluid" src="assets/images/history-elkenanygroup.jpg" alt="">
                     </div>
                     <span class="d-block text-center py-2 mb-3">2010</span>
-                    <!-- <p class="mb-3">I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine .</p> -->
                     <h3 class="mb-2 ">ElKenany For Feed Raw Materials Trading</h3>
                     <p class="mb-3 ">
                     
@@ -147,7 +152,7 @@
                         The last but not least established STARLIGHT INTERNATIONAL TRADING COMPANY L.L.C startup company in Dubai in 2023, for Consistent efforts towards “Importing & exporting and general trading” to be one of the Important mena market leaders in the trading field & around the world.
                 </p>
 
-                
+                 -->
             </div>
             </div>
         </div>
@@ -161,18 +166,18 @@
 
             <div class="g-item ">
                 <div class="img">
-                    <img class="img-fluid" src="assets/images/Untitled-1.png" alt="">
+                    <img class="img-fluid" [src]="info.images.main_company.image_url" alt="">
                 </div>
             </div>
         </div>
         <div class="gridy">
 
-            <div class="g-item">
+            <div class="g-item" *ngFor="let sub of info.images.sub_company">
                 <div class="img">
-                    <img class="img-fluid" src="assets/images/Untitled-2.png" alt="">
+                    <img class="img-fluid" [src]="sub.image_url" alt="">
                 </div>
             </div>
-            <div class="g-item">
+            <!-- <div class="g-item">
                 <div class="img">
                     <img class="img-fluid" src="assets/images/GMT.png" alt="">
                 </div>
@@ -181,7 +186,7 @@
                 <div class="img">
                     <img class="img-fluid" src="assets/images/Untitled-4.png" alt="">
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
