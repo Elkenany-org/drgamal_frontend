@@ -1,1 +1,3 @@
-<div [innerHTML]=" blog_content?.description" ></div>
+<div *ngIf="blog_content">
+    <div [innerHTML]="getSafeDescription()" ></div>
+</div>

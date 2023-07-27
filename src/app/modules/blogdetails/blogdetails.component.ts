@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { NewsService } from 'src/app/_services/news/news.service';
 import { NewDetails } from 'src/app/interfaces/news';
@@ -10,7 +11,9 @@ import { NewDetails } from 'src/app/interfaces/news';
 })
 export class BlogdetailsComponent {
   blog_content!:NewDetails
-  constructor(private blogDetails:NewsService,private route: ActivatedRoute){}
+  sanitizedDescription!: SafeHtml;
+
+  constructor(private blogDetails:NewsService,private route: ActivatedRoute,private sanitizer: DomSanitizer){}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')+'';
@@ -22,6 +25,10 @@ export class BlogdetailsComponent {
       console.log('error getting news');
     }
     )
+  }
+
+  getSafeDescription(): SafeHtml {
+    return this.sanitizer.bypassSecurityTrustHtml(this.blog_content.description);
   }
 
 }

@@ -19,7 +19,7 @@ export interface NewDetails {
     title:              string;
     image:              string;
     image_url:              string;
-    description:        string;
+    description:        any;
     shortdescription:string;
     alt_text:           string;
     focus_keyword:      null;

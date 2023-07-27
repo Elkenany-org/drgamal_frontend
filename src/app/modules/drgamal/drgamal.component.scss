@@ -114,17 +114,30 @@ iframe .ytp-title {
     color: white;
     font-weight: 700;
 }
-.history .content .img img {
+
+@media screen and (min-width: 768px) {
+.history .img-1{
+
+    width: 80%;
+    margin: auto;
+}
+}
+.history .img img {
     border-radius: 10px;
+    background-color: #304563;
 }
 .history .content span {
-    background-color: #D2A74C;
-    color: white;
-    border-radius: 10px;
-    font-size: 25px;
-    font-weight: 500;
+    // background-color: #D2A74C;
+    // color: white;
+    // border-radius: 10px;
+    // font-size: 25px;
+    // font-weight: 500;
     position: relative;
     z-index: 2;
+}
+.history p{
+    font-size: 24px;
+    text-align: justify;
 }
 .history .content span::before {
     content: "";

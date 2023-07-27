@@ -22,7 +22,7 @@
 
                     <div class="video my-5 my-xs-1 ">
 
-                        <iframe width="315" height="560" src="https://www.youtube.com/embed/BvzlsAHgJfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>   
+                        <iframe id="youtubePlayer"  width="315" height="560" src="https://www.youtube.com/embed/BvzlsAHgJfU?loop=1&playlist=BvzlsAHgJfU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowfullscreen></iframe>   
 
 
                     </div>
@@ -39,64 +39,113 @@
 <div class="history pt-2 section" #history>
     <img class="bg" src="images/Group 692.png" alt="">
     <div class="container">
-        <h2 class="text-center mb-3">Founder Of</h2>
+        <h1 class="text-center mb-3 fw-bold">Founder Of</h1>
+
+
+        <div class="col-md-6 m-auto d-md-block d-none">
+            <div class="img mb-3">
+                <img class="img-fluid" src="{{info.founder_of[0].logo_url}}" alt="">
+            </div>
+            <p class="mb-3">
+                {{info.founder_of[0].description}}
+            </p>            
+            <div class="img-1 mb-3">
+                <img style="border-radius: 10px;" class="img-fluid" src="{{info.founder_of[0].image_url}}" alt="">
+
+            </div>
+        </div>
+
+
         <div class="content pb-4">
             <div class="row px-md-0 px-3 justify-content-between">
+
+
                 <div class="left p-0 col-md-5 d-md-block d-none">
+                    <!-- ////////////////////////////////////kenany -->
                     <div class="img mb-3">
-                        <img class="img-fluid" [src]="info.founder_of[1].image_url" alt="">
+                        <img class="img-fluid" [src]="info.founder_of[2].image_url" alt="">
                     </div>
-                    <span class="d-block text-center py-2 mb-3">{{info.founder_of[1].year}}</span>
-                    <h3 class="mb-2 ">{{info.founder_of[1].title}}</h3>
+                    <span class="d-block text-center py-2 mb-3">
+                        <div class="img mb-3">
+                            <img class="img-fluid" [src]="info.founder_of[2].logo_url" alt="">
+                        </div>
+                    </span>
                     <p class="mb-3">
-                       {{info.founder_of[1].description}}
+                       {{info.founder_of[2].description}}
                     </p>
+
+                    <!-- ////////////////////////////////////gmt -->
+
                     <div class="img mb-3">
                         <img class="img-fluid" src="{{info.founder_of[3].image_url}}" alt="">
                     </div>
-                    <span class="d-block text-center py-2 mb-3">{{info.founder_of[3].year}}</span>
-                    <h3 class="mb-2 ">{{info.founder_of[3].title}}</h3>
-                    <p class="mb-md-3 mb-0">
+                    <span class="d-block text-center py-2 mb-3">
+                        <div class="img mb-3">
+                            <img class="img-fluid" src="{{info.founder_of[3].logo_url}}"  alt="">
+                        </div>
+                    </span>      
+                    <p class="mb-3">
                         {{info.founder_of[3].description}}
                     </p>
+
+                    <!-- /////////////////////////////////////// -->
+
+
                 </div>
+
                 <div class="right p-0 col-md-5 mt-md-0 d-md-block d-none">
-                    <span class="d-block text-center py-2 mb-3">{{info.founder_of[0].year}}</span>
+
+                    <!-- //////////////////////////////////////group -->
+                    <span class="d-block text-center py-2 mb-3">
+                        <div class="img mb-3">
+                            <img class="img-fluid" src="{{info.founder_of[1].logo_url}}" alt="">
+                        </div>
+                    </span>
                     <div class="img mb-3">
-                        <img class="img-fluid" src="{{info.founder_of[0].image_url}}" alt="">
+                        <img class="img-fluid" src="{{info.founder_of[1].image_url}}" alt="">
                     </div>
-                    <!-- <p class="mb-3">I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine .</p> -->
-                     <h3 class="mb-2 ">{{info.founder_of[0].title}}</h3>
                     <p class="mb-3">
-                        {{info.founder_of[0].description}}
+                        {{info.founder_of[1].description}}
                     </p>
 
-                    <span class="d-block text-center py-2 mb-3">{{info.founder_of[2].year}}</span> 
-                    <h3 class="mb-2">{{info.founder_of[2].title}}</h3>
-                    <p class="mb-3">
-                       
-                        {{info.founder_of[2].description}}
-                    
+                    <!-- //////////////////////////////////////star -->
+
+
+
+                    <!-- <span class="d-block text-center py-2 mb-3">{{info.founder_of[3].year}}</span> -->
+                    <span class="d-block text-center py-2 mb-3">
+                        <div class="img mb-3">
+                            <img class="img-fluid" src="{{info.founder_of[4].logo_url}}" alt="">
+                        </div>
+                    </span>
+                    <p class="mb-md-3 mb-0">
+                        {{info.founder_of[4].description}}
                     </p>
-                    <!-- <p class="mb-3">I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine .</p> -->
+
                     <div class="img mb-3">
-                        <img class="img-fluid" src="{{info.founder_of[2].image_url}}" alt="">
+                        <img class="img-fluid" src="{{info.founder_of[4].image_url}}" alt="">
                     </div>
+                    <!-- /////////////////////////////////// -->
                 </div>
 
 
                 <div class=" p-0 col-md-5 d-md-none d-block">
 
                     <div *ngFor="let com of info.founder_of">
-                        <div class="img mb-3">
-                            <img class="img-fluid" [src]="com.image_url" alt="">
-                        </div>
-                        <span class="d-block text-center py-2 mb-3">{{com.year}}</span>
-                        <!-- <p class="mb-3">I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine I'm Dr Gamal Elkenany chairman of the board of elkenany group graduated from the college of veterinary medicine .</p> -->
-                        <h3 class="mb-2 ">{{com.title}}</h3>
+
+                        <span class="d-block text-center py-2 mb-3">
+                            <div class="img mb-3">
+                                <img class="img-fluid" [src]="com.logo_url" alt="">
+                            </div>
+                        </span>
                         <p class="mb-3 ">
                             {{com.description}}
                         </p>
+
+                        <div class="img mb-3">
+                            <img class="img-fluid" [src]="com.image_url" alt="">
+                        </div>
+
                         <div class="line"></div>
 
                     </div>
