@@ -6,10 +6,10 @@ import { EnvConfig } from "./env-config.interface";
 
 export const environment: EnvConfig = {
   production: false,
-  ApiUrl: 'http://127.0.0.1:8000/api',
+  // ApiUrl: 'http://127.0.0.1:8000/api',
 
   // ApiUrl: 'https://test.elkenany.com/api',
-  // ApiUrl: 'https://admin.elkenany.com/api',
+  ApiUrl: 'https://admin.gamalelkenany.com/api',
 
 };
 

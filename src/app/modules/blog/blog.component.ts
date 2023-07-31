@@ -9,7 +9,7 @@ import { NewDetails, News } from 'src/app/interfaces/news';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent {
-  all_news!: NewDetails[];
+  all_news: any;
   constructor(
     private titleService:Title,private news:NewsService
     ) {
@@ -19,8 +19,8 @@ export class BlogComponent {
 
     ngOnInit(): void {
       this.news.all_news().subscribe(
-        res=>{console.log(res);
-          this.all_news=res.data
+        res=>{
+          this.all_news=res
         },
         err=>{
         console.log('error getting news');

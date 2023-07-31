@@ -26,9 +26,7 @@ export class DrgamalComponent {
     this.homeinfo.home().subscribe(
       res=>{
         this.info=res
-        console.log('====================================');
-        console.log(res);
-        console.log('====================================');
+
       },
       err=>{}
     )

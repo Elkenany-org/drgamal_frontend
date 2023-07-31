@@ -44,7 +44,7 @@
 
         <div class="col-md-6 m-auto d-md-block d-none">
             <div class="img mb-3">
-                <img class="img-fluid" src="{{info.founder_of[0].logo_url}}" alt="">
+                <a target="_blank" [href]="info.founder_of[0].link"><img class="img-fluid" src="{{info.founder_of[0].logo_url}}" alt=""></a>
             </div>
             <p class="mb-3">
                 {{info.founder_of[0].description}}
@@ -67,7 +67,7 @@
                     </div>
                     <span class="d-block text-center py-2 mb-3">
                         <div class="img mb-3">
-                            <img class="img-fluid" [src]="info.founder_of[2].logo_url" alt="">
+                            <a target="_blank" [href]="info.founder_of[2].link"><img class="img-fluid" [src]="info.founder_of[2].logo_url" alt=""></a>
                         </div>
                     </span>
                     <p class="mb-3">
@@ -81,7 +81,7 @@
                     </div>
                     <span class="d-block text-center py-2 mb-3">
                         <div class="img mb-3">
-                            <img class="img-fluid" src="{{info.founder_of[3].logo_url}}"  alt="">
+                            <a target="_blank" [href]="info.founder_of[3].link"><img class="img-fluid" src="{{info.founder_of[3].logo_url}}"  alt=""></a>
                         </div>
                     </span>      
                     <p class="mb-3">
@@ -98,7 +98,7 @@
                     <!-- //////////////////////////////////////group -->
                     <span class="d-block text-center py-2 mb-3">
                         <div class="img mb-3">
-                            <img class="img-fluid" src="{{info.founder_of[1].logo_url}}" alt="">
+                            <a target="_blank" [href]="info.founder_of[1].link"><img class="img-fluid" src="{{info.founder_of[1].logo_url}}" alt=""></a>
                         </div>
                     </span>
                     <div class="img mb-3">
@@ -115,7 +115,7 @@
                     <!-- <span class="d-block text-center py-2 mb-3">{{info.founder_of[3].year}}</span> -->
                     <span class="d-block text-center py-2 mb-3">
                         <div class="img mb-3">
-                            <img class="img-fluid" src="{{info.founder_of[4].logo_url}}" alt="">
+                            <a target="_blank" [href]="info.founder_of[4].link"><img class="img-fluid" src="{{info.founder_of[4].logo_url}}" alt=""></a>
                         </div>
                     </span>
                     <p class="mb-md-3 mb-0">
@@ -135,7 +135,7 @@
 
                         <span class="d-block text-center py-2 mb-3">
                             <div class="img mb-3">
-                                <img class="img-fluid" [src]="com.logo_url" alt="">
+                                <a target="_blank" [href]="com.link"><img class="img-fluid" [src]="com.logo_url" alt=""></a>
                             </div>
                         </span>
                         <p class="mb-3 ">
@@ -215,7 +215,7 @@
 
             <div class="g-item ">
                 <div class="img">
-                    <img class="img-fluid" [src]="info.images.main_company.image_url" alt="">
+                    <a [href]="info.images.main_company.link" target="_blank"><img class="img-fluid" [src]="info.images.main_company.image_url" alt=""></a>
                 </div>
             </div>
         </div>
@@ -223,7 +223,7 @@
 
             <div class="g-item" *ngFor="let sub of info.images.sub_company">
                 <div class="img">
-                    <img class="img-fluid" [src]="sub.image_url" alt="">
+                    <a [href]="sub.link" target="_blank"><img class="img-fluid" [src]="sub.image_url" alt=""></a>
                 </div>
             </div>
             <!-- <div class="g-item">

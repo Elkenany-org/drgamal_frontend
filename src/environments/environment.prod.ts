@@ -1,5 +1,5 @@
 export const environment = {
-  ApiUrl: 'https://admin.elkenany.com/api',
+  ApiUrl: 'https://admin.gamalelkenany.com/api',
   production: true,
 
 };
